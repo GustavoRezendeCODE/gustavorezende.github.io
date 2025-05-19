@@ -1,0 +1,239 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif; /* Fonte simples e legível */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f2ee; /* Cor de fundo clara, similar ao LinkedIn */
+    color: #333; /* Cor do texto padrão */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+.container {
+    max-width: 960px; /* Largura máxima do conteúdo central */
+    margin: 20px auto; /* Centraliza o container com margem superior e inferior */
+    padding: 0 20px; /* Espaçamento interno nas laterais */
+}
+
+/* Estilos do cabeçalho do perfil */
+.profile-header {
+    background-color: #fff; /* Fundo branco para o cabeçalho */
+    padding-bottom: 20px;
+    /* Removido text-align: center; para alinhar o texto à esquerda */
+    position: relative; /* Necessário para posicionar a foto de perfil */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que a sombra e borda arredondada funcionem corretamente */
+    padding-top: 0; /* Ajuste para remover padding superior extra */
+}
+
+.cover-photo {
+    width: 100%;
+    height: 200px; /* Altura da foto de capa */
+    overflow: hidden; /* Esconde partes da imagem que excedem o container */
+    background-color: #c3d6e1; /* Cor de fundo caso a imagem não carregue */
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem de capa cubra a área sem distorcer */
+}
+
+.profile-photo {
+    width: 150px; /* Tamanho da foto de perfil */
+    height: 150px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    overflow: hidden;
+    position: absolute; /* Posiciona a foto sobre a foto de capa */
+    /* Ajustando a posição para o canto esquerdo */
+    top: 120px; /* Posiciona a foto 120px do topo (ajuste conforme a altura da sua foto de capa) */
+    left: 20px; /* Posiciona a foto 20px da esquerda */
+    /* Removido transform: translate(-50%, 50%); */
+    border: 4px solid #fff; /* Borda branca ao redor da foto de perfil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra na foto de perfil */
+    background-color: #eee; /* Cor de fundo caso a imagem não carregue */
+    z-index: 1; /* Garante que a foto de perfil fique acima da foto de capa */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem de perfil cubra a área sem distorcer */
+}
+
+.profile-info {
+    /* Ajustando a margem esquerda para dar espaço à foto de perfil */
+    margin-top: 20px; /* Ajuste a margem superior conforme necessário */
+    margin-left: 190px; /* Margem maior para acomodar a foto (150px + 20px left + espaço) */
+    padding: 0 20px 0 0; /* Ajuste o padding, removendo o padding esquerdo */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.profile-info h1 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #0077b5; /* Azul do LinkedIn para o nome */
+    font-size: 1.8em; /* Tamanho maior para o nome */
+}
+
+.profile-info p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Estilos da navegação */
+.navigation {
+    background-color: #fff; /* Fundo branco para a navegação */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 20px;
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+.navigation ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Organiza os links em linha */
+    justify-content: center; /* Centraliza os links */
+    flex-wrap: wrap; /* Permite que os links quebrem linha em telas menores */
+}
+
+.navigation li {
+    margin: 0 15px; /* Espaçamento entre os links */
+}
+
+.navigation a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #0077b5; /* Azul do LinkedIn para os links */
+    padding: 15px 0;
+    display: block;
+    transition: color 0.3s ease; /* Transição suave na cor */
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #005f8c; /* Cor mais escura ao passar o mouse */
+    border-bottom: 2px solid #0077b5; /* Adiciona uma borda inferior ao passar o mouse */
+}
+
+/* Estilos das seções de conteúdo */
+.section {
+    background-color: #fff; /* Fundo branco para as seções */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+.section h2 {
+    color: #0077b5; /* Azul do LinkedIn para os títulos das seções */
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0; /* Linha inferior para separar o título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Tamanho maior para os títulos das seções */
+}
+
+.section p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.section ul {
+    list-style: disc; /* Marcadores de lista */
+    margin-left: 20px; /* Espaçamento para os marcadores */
+}
+
+.section li {
+    margin-bottom: 10px;
+}
+
+.section li a {
+    color: #0077b5; /* Azul para links dentro das seções */
+    text-decoration: none;
+}
+
+.section li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+
+/* Estilos do formulário de contato */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Coloca o label em uma linha separada */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Largura do input com padding e borda */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+button[type="submit"] {
+    background-color: #0077b5; /* Azul do LinkedIn para o botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave no fundo */
+}
+
+button[type="submit"]:hover {
+    background-color: #005f8c; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos do rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Estilos responsivos básicos */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        /* Ajuste a posição em telas menores */
+        top: 100px; /* Pode precisar ajustar */
+        left: 10px; /* Pode precisar ajustar */
+    }
+
+    .profile-info {
+        /* Ajuste a margem em telas menores */
+        margin-top: 20px; /* Pode precisar ajustar */
+        margin-left: 130px; /* Ajuste a margem para acomodar a foto menor */
+        padding: 0 10px 0 0; /* Ajuste o padding */
+    }
+
+    .navigation ul {
+        flex-direction: column; /* Empilha os links em telas menores */
+        align-items: center; /* Centraliza os links empilhados */
+    }
+
+    .navigation li {
+        margin: 5px 0; /* Espaçamento vertical entre os links */
+    }
+
+    .container {
+        padding: 0 10px; /* Reduz o espaçamento interno em telas menores */
+    }
+}
